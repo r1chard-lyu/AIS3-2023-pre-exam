@@ -4,7 +4,7 @@
 很高興今年參與 AIS Pre-exam 及 MyfirstCTF的出題，因為兩場比賽同時進行，這次出題設計是初學者導向，希望大家在解題中可以找到成就感，並從中找到解 CTF 的樂趣。
 
 ## [Crypto] Fernet 
-AIS3-Pre-exam 177 Solves, My First CTF - 58 Solves
+AIS3-Pre-exam 177/256 Solves, My First CTF - 58/111 Solves
 
 此題為 Crypto 簽到題，在思考要如何出的不會太難，又可讓同學體驗到解題的樂趣，於是決定出了一題簡單的對稱式加密
 。你只要上網搜尋一下 Fernet 就會知道這是一種對稱式加密的演算法，這題原本打算要用其他方式去 leak 出 public key，再用 public key 去解密，但考量到是 easy 的題目，所以直接將 public key 放在程式裡面，你只需要知道他是對稱式加密，並且花點時間研究一下文檔或是網路上的相關資訊，就會知道如何使用 library 解出這題。
@@ -37,7 +37,7 @@ print("Encrypted data:",ciphertext)
 
 
 ## [PWN] ManagementSystem 
-AIS3-Pre-exam 39 Solves, My First CTF - 3 Solves
+AIS3-Pre-exam 39/256 Solves, My First CTF - 3/111 Solves
 
 這題打開程式可能很多人會以為這一百多行的程式是要解 heap over flow，但這題是 easy 的題目，只要再把程式看完，會發現其實這支程式的漏洞只是簡單的 buffer over flow，delete_user function 會使用 gets 函數來讀取 buffer，如果你一開始有先看 makefile，並且有嘗試 make 檔案，其實編譯器也會告訴你 'gets' function is dangerous and should not be used，
 ```shell
