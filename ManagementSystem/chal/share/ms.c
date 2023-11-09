@@ -2,8 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-
 void init(){
     setvbuf(stdout,0,2,0);
     setvbuf(stdin,0,2,0);
@@ -68,6 +66,7 @@ void show_users(User *head) {
         count++;
     }
 }
+
 User *delete_user(User *head) {
     printf("Enter the index of the user you want to delete: ");
     char buffer[64];
@@ -129,7 +128,6 @@ int main() {
         scanf("%d", &choice);
         getchar(); 
         switch (choice) {
- 
             case 1:
                 users = add_user(users);
                 break;
